@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lisper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  </head>
+
+  <body>
+    <h1>Welcome to the Joke Generator</h1>
+    <h2>Select categories:</h2>
+    <form action="/joke" method="POST">
+      <label> <input type="radio" name="category" value="Any" /> Any </label>
+      <label>
+        <input type="radio" name="category" value="Programming" /> Programming
+      </label>
+      <label> <input type="radio" name="category" value="Misc" /> Misc </label>
+      <label> <input type="radio" name="category" value="Dark" /> Dark </label>
+      <label> <input type="radio" name="category" value="Pun" /> Pun </label>
+      <label>
+        <input type="radio" name="category" value="Spooky" /> Spooky
+      </label>
+      <label>
+        <input type="radio" name="category" value="Christmas" /> Christmas
+      </label>
+
+      <button type="submit">Generate Joke!</button>
+    </form>
+    <% if (locals.setup) { %>
+    <p><%= setup %></p>
+    <p><%= delivery %></p>
+    <% } %>
+  </body>
+</html>
+
+<!-- <div class="card">
+    <p>
+    </p>
+  </div>
+  <p class="user">
+  </p> -->
